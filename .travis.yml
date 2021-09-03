@@ -6,4 +6,4 @@ before_install:
   - docker build -t mayank_front -f Dockerfile.dev .
 
 script:
-  - docker run mayank_front npm run test -- --coverage
+  - docker run -e CI=true mayank_front npm run test
